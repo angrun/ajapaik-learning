@@ -36,5 +36,6 @@ class TrainigService(object):
 
             print(predictions)
             return predictions
-        except Exception:
+        except Exception as e:
+            print(e)
             return f"Something went wrong {image_url}"
