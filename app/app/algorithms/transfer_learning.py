@@ -33,7 +33,7 @@ def get_data(data_dir):
 def get_model():
 
     train = get_data(
-        'app/app/algorithms/interior_exterior')
+        'interior_exterior')
     test = get_data('/Users/annagrund/PycharmProjects/ajapaik-learning/app/app/algorithms/interior_exterior/input/test')
 
 
