@@ -34,9 +34,15 @@ class TrainigService(object):
             img_preprocessed = preprocess_input(img_batch)
             predictions = self.model.predict(img_preprocessed)
 
-            print(predictions.tolist())
-            print(type(predictions.tolist()))
-            return predictions
+            return self.conclude_category(predictions)
         except Exception as e:
             print(e)
             return f"Something went wrong {image_url}"
+
+    @staticmethod
+    def conclude_category(predictions):
+        pred = predictions.tolist()[0]
+        if pred[0] > pred[1]:
+            return {"probability": pred[0], "category": "interior"}
+        return {"probability": pred[1], "category": "exterior"}
+
