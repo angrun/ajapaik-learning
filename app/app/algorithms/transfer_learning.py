@@ -98,7 +98,7 @@ def get_model():
                   loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),  # Verify, if that was the issue
                   metrics=['accuracy'])
 
-    model.fit(x_train, y_train, epochs=2, validation_data=(x_test, y_test))
+    model.fit(x_train, y_train, epochs=500, validation_data=(x_test, y_test))
 
     return model
 
