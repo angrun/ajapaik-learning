@@ -35,6 +35,7 @@ class TrainigService(object):
             predictions = self.model.predict(img_preprocessed)
 
             print(predictions)
+            print(type(predictions))
             return predictions
         except Exception as e:
             print(e)
