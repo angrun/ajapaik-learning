@@ -42,6 +42,7 @@ class TrainigService(object):
     @staticmethod
     def conclude_category(predictions):
         pred = predictions.tolist()[0]
+        print(pred)
         if pred[0] > pred[1]:
             return {"probability": pred[0], "category": "exterior"}
         return {"probability": pred[1], "category": "interior"}
