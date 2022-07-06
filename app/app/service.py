@@ -34,8 +34,8 @@ class TrainigService(object):
             img_preprocessed = preprocess_input(img_batch)
             predictions = self.model.predict(img_preprocessed)
 
-            print(predictions)
-            print(type(predictions))
+            print(predictions.tolist())
+            print(type(predictions.tolist()))
             return predictions
         except Exception as e:
             print(e)
