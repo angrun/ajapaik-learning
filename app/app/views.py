@@ -15,3 +15,4 @@ def get_prediction(request, image_url):
 def post_prediction(request):
     if request.method == 'POST':
         print("Hello")
+        return HttpResponse(json.dumps("{status:200}"), content_type="application/json")
