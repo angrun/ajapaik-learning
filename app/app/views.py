@@ -12,6 +12,6 @@ def get_prediction(request, image_url):
         return HttpResponse(json.dumps(response), content_type="application/json")
 
 
-def post_prediction(request, image_url):
+def post_prediction(request):
     if request.method == 'POST':
         print("Hello")
