@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['staging.ajapaik.ee', 'anna.ajapaik.ee', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://anna.ajapaik.ee']
+CSRF_TRUSTED_ORIGINS = ['https://anna.ajapaik.ee', 'http://localhost:8000']
 
 # Application definition
 
