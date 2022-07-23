@@ -7,8 +7,8 @@ from app.service import TrainigService
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('predict/<str:image_url>', views.get_prediction)
-    # path('predict', views.post_prediction, name = 'post_prediction'),
+    path('predict/<str:image_url>', views.get_prediction),
+    path('predict', views.post_prediction, name = 'post_prediction')
 ]
 
 TrainigService().train()
