@@ -2,6 +2,7 @@ import json
 
 from app.service import TrainigService
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
 def get_prediction(request, image_url):
@@ -11,7 +12,7 @@ def get_prediction(request, image_url):
         response = TrainigService().predict(image_url)
         return HttpResponse(json.dumps(response), content_type="application/json")
 
-
+@csrf_exempt
 def post_prediction(request):
     if request.method == 'POST':
         print("Hello")
